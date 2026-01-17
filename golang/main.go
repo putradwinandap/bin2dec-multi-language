@@ -16,7 +16,7 @@ func main() {
 	}
 
 	decimal := 0
-	pangkat := len(binary) - 1
+	exponent := len(binary) - 1
 
 	for _, char := range binary {
 
@@ -26,8 +26,8 @@ func main() {
 		}
 
 		digit := int(char - '0')
-		decimal += digit * int(math.Pow(2, float64(pangkat)))
-		pangkat--
+		decimal += digit * int(math.Pow(2, float64(exponent)))
+		exponent--
 	}
 
 	fmt.Println("Decimal result:", decimal)
